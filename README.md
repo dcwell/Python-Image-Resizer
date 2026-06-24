@@ -1,6 +1,6 @@
 # Python-Image-Resizer
 
-Leveraging Copilot to make a quick image resizer.
+Leveraging Copilot with promt enginnering to make a quick image resizer.
 
 Reduce an image's **file size in bytes** (e.g. *"reduce to 2 MB"*) **without
 changing its pixel dimensions**. This is re-compression, not resampling — the
