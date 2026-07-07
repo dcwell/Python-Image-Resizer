@@ -94,6 +94,15 @@ Result : JPEG quality=53, 1.91 MB, dimensions unchanged (4032x3024)
 Saved     : vacation_Resized_2MB.jpg
 ```
 
+### What `--png-strategy quantize` does
+
+Since PNG has no quality knob, `quantize` shrinks it by **color quantization** —
+reducing the image to a small palette (e.g. 64 colors) and storing one palette
+index per pixel instead of full RGB(A). Fewer colors → smaller file, at the
+**same dimensions**. It's lossy (heavy reduction can cause visible banding),
+so it's opt-in; the tool binary-searches the largest palette that fits your
+target, and transparency is preserved.
+
 ## Behavior notes
 
 - **Already small enough?** If the source already fits under the target, it's
