@@ -105,6 +105,13 @@ Saved     : vacation_Resized_2MB.jpg
 - **Metadata** (EXIF) is stripped on re-encode — a small, free size win.
 - **Animated** GIF/WebP are refused in v1 (resizing would drop frames).
 
+## Privacy
+
+Runs **100% on-device**. Your images are read from disk, compressed in memory,
+and written back to the same folder — nothing is uploaded, and the tool works
+fully offline. The only third-party dependency is [Pillow](https://python-pillow.org/),
+a local image library; there are no network calls, telemetry, or analytics.
+
 ## Development
 
 ```bash
